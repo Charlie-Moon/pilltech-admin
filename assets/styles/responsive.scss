@@ -1,0 +1,849 @@
+@media (min-width: 320px) and (max-width: 736px) {
+
+  .container {
+    min-width: 100% !important;
+    padding: 0px 15px;
+  }
+
+  .client-comment .owl-theme .owl-nav {
+    top: 20px;
+  }
+
+  .pill-header {
+
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)
+
+  }
+
+  .pill-header .container .row {
+    justify-content: space-between;
+    /* flex-flow: row-reverse; */
+  }
+
+  .navbar {
+    justify-content: flex-end;
+  }
+
+  .pill-header .navbar {
+    padding-top: 10px;
+  }
+
+  .pill-header .navbar .navbar-nav {
+    height: unset;
+  }
+
+  .pill-header .navbar .navbar-nav .nav-item {
+    justify-content: flex-end;
+  }
+
+  .pill-header .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+  }
+
+  .pill-header .navbar .navbar-nav .nav-item.telephone {
+    display: none;
+  }
+
+  .navbar-toggler {
+    font-size: 14px;
+  }
+
+  .background-img-header {
+    display: none;
+  }
+
+  .pharmacy-trial {
+    margin: 0px;
+  }
+
+  .pharmacy-trial .text-pharmacy h1 {
+    width: 100%;
+    font-size: 34px;
+    text-align: left;
+    line-height: 60px;
+  }
+
+  .pharmacy-trial .trial-watch {
+    width: auto;
+    padding: 0px;
+  }
+
+  .pharmacy-trial .trial-watch .trial {
+    text-align: center;
+    width: auto;
+    padding: 5px 20px;
+  }
+
+  .feature .feature-title h1 {
+    font-size: 25px;
+  }
+
+  .feature a .card .card-body .card-title {
+    font-size: 18px;
+  }
+
+  .feature a .card .card-header .card-icon i {
+    font-size: 23px;
+  }
+
+  .feature a .card .card-header .card-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .message-ceo {
+
+    .ceo {
+
+      .ceo-in {
+
+        border: 1px solid #eee;
+        padding: 20px 0;
+        position: initial;
+
+        .img-ceo {
+
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+
+        }
+
+        .ceo-title {
+
+          text-align: center;
+
+          h3 {
+            
+            font-size: 20px;
+
+          }
+
+        }
+
+        .msg-title {
+
+          h2 {
+
+            font-size: 20px;
+
+          }
+
+          p {
+
+            font-size: 16px;
+            line-height: 30px;
+            height: 180px;
+            overflow: hidden;
+
+          }
+
+        } // msg title
+
+      } // ceo in
+
+      .ceo-bg-out {
+
+        display: none;
+
+        img {
+
+          display: none;
+
+        }
+        
+      } // ceo out
+
+    } // ceo
+
+  } // message ceo
+
+
+  .client-comment {
+
+    .client-title {
+      margin-bottom: 20px;
+    }
+
+    .client-carou {
+
+      .btn-prev {
+
+        right: 13%;
+
+      }
+
+      .btn-prev, .btn-next {
+
+        height: 30px;
+        width: 30px;
+
+        i {
+
+          font-size: 90%;
+
+        }
+        
+      }
+
+    } // client carou
+    
+  } // client comment
+
+
+  .client-comment {
+
+    .client-carou {
+
+      .client {
+
+        .media-cover {
+
+          height: auto;
+          padding: 30px;
+
+        }
+
+      }
+
+    }
+
+  } // client comment
+
+  .client-comment .client-title h1 {
+    font-size: 25px;
+  }
+
+  .choose-price .choose-bg {
+    padding: 0px;
+    background-color: transparent;
+  }
+
+  .choose-price .bg-style img {
+    display: none;
+  }
+
+  .choose-price .choose-bg .choose-title h1 {
+    font-size: 25px;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .card-title-g h5 {
+    font-size: 2rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .card-title-b h5 {
+    font-size: 2rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .card-title-g h4 {
+    font-size: 2.5rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .card-title-b h4 {
+    font-size: 2.5rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .card-title-g h6 {
+    font-size: 1rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .card-title-b h6 {
+    font-size: 18px;
+  }
+  .choose-price .choose-bg .select-price .card .card-body .card-text p {
+    font-size: .9rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .card-text {
+    font-size: 1.5rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .price-btn-b a {
+    font-size: 1rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .price-btn-g a {
+    font-size: 1rem;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .price-btn-b {
+    margin: auto;
+    margin-bottom: unset;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .price-btn-g {
+    width: 200px;
+    margin: auto;
+    margin-bottom: unset;
+  }
+
+  .choose-price .choose-bg .select-price .card {
+    height: 100%;
+    /* height: 728px; */
+  }
+
+  .watch-tutorial .tutorial-title h1 {
+    font-size: 25px;
+  }
+
+  .watch-tutorial .tutorial-detail {
+    padding-top: 20px;
+  }
+
+  .watch-tutorial .tutorial-video {
+    padding: 25px;
+  }
+
+  .watch-tutorial .tutorial-video .tutorial-detail h2 {
+    font-size: 20px;
+  }
+
+  .download-app {
+
+    .download-img-app {
+
+      img {
+
+        width: 100%;
+        height: auto;
+
+      }
+
+    } // download img app
+
+    .download-text-app {
+
+      padding: 20px;
+
+      h1 {
+
+        font-size: 25px;
+        text-align: center;
+
+      }
+
+      p {
+        
+        line-height: initial;
+        height: auto;
+        font-size: 1rem;
+
+      }
+
+    } // download text app
+
+    .download-bg-app {
+
+      padding: 0px;
+      background-color: #f4f7f9;
+      background-image: unset;
+      border-radius: 15px;
+      height: auto;
+
+    }
+
+    .download-text-app {
+      padding: 20px;
+    }
+
+    .download-link {
+
+      .store {
+
+        padding: 15px;
+
+        .text {
+
+          h6 {
+
+            font-size: 1rem;
+            
+          }
+
+          p {
+
+            font-size: 11px;
+            
+          }
+
+        }
+
+      } // store
+      
+    }
+
+    .download-img-app {
+      display: none;
+    }
+
+  } // downlaod app
+
+
+  .interested {
+
+    .interest {
+
+      flex-flow: column;
+      padding: 20px;
+
+      .interest-text {
+
+        width: 100%;
+
+        h1 {
+
+          font-size: 25px;
+
+        }
+
+        p {
+
+          margin-bottom: 20px;
+
+        }
+
+      }
+
+    } // interest
+
+  } // interested
+
+
+  .ask-question .ask-title h1 {
+    font-size: 25px;
+  }
+  
+
+  .blog .blog-title h1 {
+    font-size: 25px;
+  }
+
+  .blog .card .card-body .card-title {
+    font-size: 20px;
+  }
+
+  .blog .card .card-body .card-text {
+    font-size: 16px;
+  }
+
+  .pill-footer {
+
+    .pill-footer-bot {
+
+      p {
+
+        text-align: left;
+        width: 80%;
+
+      }
+
+    }
+
+  }
+
+  .chat-now {
+
+    bottom: 5px;
+    right: 20px;
+    font-size: 0;
+    padding: 10px;
+
+    span {
+
+      padding-right: 0;
+
+    }
+
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .feature h1,
+  .message-ceo h1,
+  .watch-tutorial h1,
+  .client-comment h1,
+  .choose-price h1,
+  .ask-question h1,
+  .download-app h1,
+  .blog h1,
+  .interested h1 {
+    font-size: 1.8rem;
+  }
+
+  .pill-header {
+
+    .row {
+      flex-flow: row;
+    }
+
+    .navbar {
+      justify-content: flex-end;
+
+      .navbar-nav {
+
+        .nav-item {
+          justify-content: flex-end;
+        }
+      }
+    }
+
+  }
+  .pharmacy-trial {
+    margin: 70px 0;
+
+    .text-pharmacy h1 {
+      width: 40%;
+    }
+
+    .trial-watch {
+      width: 50%;
+
+      .trial {
+        margin-right: auto;
+      }
+    }
+  }
+
+
+  .choose-price {
+    .choose-bg {
+      padding: 30px;
+    }
+  }
+
+  .message-ceo{
+
+    .ceo {
+
+      .ceo-in {
+
+        .img-ceo {
+          
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 10px;
+          width: 100px;
+
+        }
+
+        .ceo-title {
+          text-align: center;
+
+          h5 {
+
+            font-size: 1rem;
+
+          }
+
+        }
+
+        .msg-title {
+
+          
+          p {
+
+            font-size: 1rem;
+            line-height: 1.5;
+
+          }
+
+        } // msg title
+
+      } // ceo in
+
+    } // ceo
+
+  } // message ceo
+
+  .download-app {
+
+    .download-img-app {
+
+      display: block;
+      
+    }
+
+    .download-bg-app {
+
+      height: auto;
+      padding: 55px 30px;
+
+    } // down bg app
+    
+    .download-link {
+
+      .store {
+
+        padding: 5px 10px;
+
+        .text {
+
+          h6 {
+
+            font-size: 1rem;
+
+          }
+
+          p {
+
+            font-size: .6rem;
+
+          }
+
+        }
+      }
+
+    } // download link
+
+} // download app
+
+  .watch-tutorial {
+
+    .tutorial-video {
+
+      padding: 30px;
+
+      .tutorial-detail {
+
+        padding: 0px;
+
+        p {
+
+          height: auto;
+
+        }
+
+      }
+
+    } // video
+
+  } // watch tutorial
+
+  .client-comment {
+
+    .client-carou {
+
+      .btn-prev {
+          right: 8%;
+      }
+
+      .client {
+        
+        .client-card-out {
+
+          .media {
+            padding: 20px 20px 0px 20px;
+          }
+
+          .media-content {
+            display: flex;
+            padding: 10px 20px 0px 20px;
+
+            i {
+              margin-right: .5rem;
+            }
+
+            P {
+              height: auto;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  .interested {
+
+    .interest {
+      padding: 30px;
+    }
+
+  }
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .pharmacy-trial {
+    .text-pharmacy h1, & .trial-watch {
+      width: 40% !important;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .pill-header .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .background-img-header .img-bg {
+    height: 550px;
+  }
+
+  .pharmacy-trial {
+    margin: 70px 0px 100px 0px;
+  }
+
+  .pharmacy-trial .text-pharmacy h1 {
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .pharmacy-trial .trial-watch {
+    width: 35%;
+    justify-content: space-between;
+    font-size: 90%;
+  }
+
+  .feature .feature-title h1 {
+    font-size: 30px;
+  }
+
+  .feature a .card .card-body .card-title {
+    font-size: 1.1rem;
+  }
+
+
+  .watch-tutorial .tutorial-video .tutorial-detail h2 {
+    font-size: 25px;
+  }
+
+ 
+
+  .choose-price .choose-bg {
+    padding: 30px 40px;
+  }
+
+  .choose-price .bg-style img {
+    width: 960px;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body {
+    padding: 30px 15px;
+  }
+
+  .choose-price .choose-bg .choose-title h1 {
+    font-size: 30px;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .price-btn-g {
+    width: 100%;
+  }
+
+  .choose-price .choose-bg .select-price .card .card-body .price-btn-b {
+    width: 100%;
+  }
+
+  .download-app .download-bg-app {
+    padding: 0px;
+    background-color: #f4f7f9;
+    background-image: unset;
+    border-radius: 15px;
+  }
+
+  .download-app .download-bg-app .row {
+    padding: 30px;
+  }
+
+  .download-app .download-bg-app {
+    padding: 0px;
+  }
+
+  .download-app .download-link .play-store {
+    margin: auto;
+  }
+
+
+  .download-app .download-text-app p {
+    text-align: center;
+  }
+
+  .client-comment .client-title h1 {
+    font-size: 30px;
+  }
+
+  .client-comment .client-carou .btn-prev {
+    right: 6%;
+  }
+
+
+  .client-comment .client-carou .client .client-card-out .media-content {
+    padding: 20px 30px 0px 30px;
+  }
+
+  .client-comment .client-carou .client .client-card-out .media {
+    padding: 30px 30px 0px 30px;
+  }
+
+
+  .message-ceo .ceo .ceo-bg-out {
+    height: unset;
+  }
+
+  .message-ceo .ceo .ceo-in .msg-title p {
+    font-size: 20px;
+  }
+
+  .message-ceo .ceo .ceo-in .msg-title h2 {
+    font-size: 25px;
+  }
+
+  .message-ceo .ceo .ceo-in .ceo-title h3 {
+    font-size: 20px;
+  }
+
+  .ask-question .ask-title h1 {
+    font-size: 30px;
+  }
+
+}
+
+@media (min-width: 1600px) {
+  .container {
+    min-width: 1380px;
+  }
+  .pill-header .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .pharmacy-trial {
+    .trial-watch {
+      .trial {
+        font-size: initial;
+      }
+    }
+  }
+
+  .feature{
+    .card-icon  {
+      border-radius: 20px;
+      width: 64px;
+      height: 64px;
+      i {
+        font-size: 30px;
+      }
+    }
+    .card-body {
+      .card-title {
+        font-size: 1.4rem;
+      }
+      .card-text {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .message-ceo {
+    .ceo {
+      .ceo-in {
+        .img-ceo {
+          width: 200px;
+        }
+         
+      }
+    }
+  }
+}
+}

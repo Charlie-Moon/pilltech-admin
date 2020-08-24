@@ -1,0 +1,198 @@
+@import 'mixin';
+.article-detail, .page-detail {
+
+    .detail-title {
+
+        font-weight: $font-bold;
+
+    }
+
+    @include media-title;
+
+    @include cover;
+
+    .sharing {
+        .social {
+            border: 1px solid;
+            border-radius: 20px;
+            text-align: center;
+            width: 40px;
+            height: 30px;
+            line-height: 1.7;
+            a {
+                display: block;
+                color: #465862;
+            }
+        }
+    }
+
+
+    .media-stack {
+
+        hr {
+
+            border-top-color: #4290CC;
+
+        }
+
+        .media {
+
+            border-top: 1px solid $light-grey;
+            padding-top: 20px;
+            margin-top: 20px;
+
+        }
+        .media-cover {
+
+            position: relative;
+            flex: 1;
+            margin-right: .5rem;
+
+            &::before {
+
+                display: block;
+                content: "";
+
+            }
+        }
+
+        .media-body {
+
+            flex: 2;
+
+            a {
+                color: $text-link;
+                font-weight: $font-bold;
+            }
+
+        }
+        &.related-news {
+
+            .media {
+
+                border-top: none;
+                border-bottom: 1px solid $light-grey;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                padding-top: 0;
+                margin-top: 0;
+
+                .media-cover {
+
+                    margin-right: 1rem;
+
+                }
+
+                h6 {
+                    @include font-family-bold
+                }
+                
+                .media-footer {
+
+                    a {
+
+                        color: $text-green;
+
+                    }
+                    
+                }
+                
+            }
+
+        }
+    }
+
+
+    .card {
+        height: 100%
+    }
+
+    .card-body {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .position {
+        color: $text-link-light;
+        display: block;
+        margin-top: 15px;
+        font-size: 80%;
+    }
+    .card-text {
+        margin-top: auto;
+    }
+    .social {
+
+        .list-group-item {
+
+            border: none;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            a {
+                color: $text-social;
+            }
+
+        }
+
+    }
+
+    .core-team {
+
+        .card-img {
+            border-radius: 50% !important;
+            margin: auto;
+            margin-top: 40px;
+            width: 150px;
+        }
+
+    }
+
+} // article detail
+
+.page-detail 
+
+    .color-link {
+
+        color: $text-link;
+
+    }
+
+.row .col {
+
+    margin-bottom: 30px;
+
+   
+
+}
+
+
+// Page Contact
+
+.page-contact {
+
+    .contact-field {
+        padding: 150px 50px 0;
+        clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 99%, 0 0);
+        background-color: #F4F7F9;
+    
+        i {
+            color: $text-green;
+            font-size: 2rem;
+        }
+        p {
+            color: $text-link;
+        }
+    }
+    .form-control {
+        border: 1px solid $text-social;
+    }
+    .btn-submit {
+        color: $text-social;
+        border: 1px solid $text-social;
+        padding: 10px 50px;
+        border-radius: 31px;
+    }
+
+}

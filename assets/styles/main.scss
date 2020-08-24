@@ -1,0 +1,32 @@
+// @import "~bootstrap/scss/bootstrap";
+// @import "~slick-carousel/slick/slick.scss";
+// @import 'node_modules/slick-carousel/slick/slick.css';
+
+// @import "fontawesome/css/all.min.css";
+@import 'utinities/variables';
+@import 'utinities/custom';
+@import 'utinities/nav';
+@import 'utinities/footer';
+@import 'utinities/detail';
+@import 'utinities/mixin';
+@import "responsive.scss";
+@import 'utinities/slick';
+
+.font-bold {
+    font-weight: $font-bold;
+}
+// Font Face
+
+
+// @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+// Battambang font
+// @font-face {
+//     font-family: Battambang;
+//     src: url("~assets/fonts/battambang/KhmerOSBattambang-Regular.ttf");
+// }
+
+// @font-face {
+//     font-family: Battambang-bold;
+//     src: url("~assets/fonts/battambang/KhmerOSBattambang-Bold.ttf");
+// }

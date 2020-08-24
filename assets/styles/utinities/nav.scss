@@ -1,0 +1,63 @@
+.pill-header {
+    transition: all 0.5s ease;
+
+    .navbar {
+        z-index: 9999;
+
+        .navbar-nav {
+            justify-content: flex-end;
+
+            .nav-item {
+                display: flex;
+
+                .nav-link {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    align-self: center;
+                    color: #000000;
+                    font-weight: $font-bold;
+                    font-size: 1.1rem;
+
+                    &:hover {
+                        color: #4290CC;
+                    }
+                }
+            }
+            &.nav-right {
+                .nav-link {
+                    font-size: 80%;
+                }
+                .telephone {
+                    .nav-link {
+                        padding-top: .3rem;
+                        padding-bottom: .3rem;
+                        border: 1px solid #DCE4EA;
+                        background-color: white;
+                        color: #86939E;
+                        border-radius: 50px;
+                        font-weight: $font-reg;
+                    }
+    
+                    i {
+                        color: #5AB248;
+                    }
+                }
+    
+                .login {
+                    .nav-link {
+                        color: #4290CC;
+                        font-weight: $font-bold;
+                        @media (min-width: 992px) {
+                            padding-right: 0;
+                        }
+                       
+    
+                        &:hover {
+                            color: rgb(136, 197, 243);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
