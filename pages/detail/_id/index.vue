@@ -106,7 +106,6 @@
 
             <!-- media list -->
             <ul class="list-unstyled" v-for="lt in latest" v-bind:key="lt.id">
-              <h1>{{lt.publish_at}}</h1>
               <li class="media">
                 <div class="media-cover embed-responsive-4by3">
                   <img :src="apiUrl +''+ lt.art_image.url" alt class="cover" />
@@ -177,6 +176,7 @@ export default {
     this.fetchArticles();
     this.fetchRelatedNew();
     this.fetchLatestNew();
+    //new change
   },
 };
 </script>
