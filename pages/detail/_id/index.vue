@@ -68,23 +68,23 @@
               <h3 class="media-title mb-4">{{ $t('re_news') }}</h3>
 
               <!-- media list -->
-              <ul class="list-unstyled" v-for="article in articles" v-bind:key="article.id">
+              <ul class="list-unstyled" v-for="re in related" v-bind:key="re.id">
                 <li class="media">
                   <div class="media-cover embed-responsive-4by3">
-                    <img :src="apiUrl +''+ article.art_image.url" alt class="cover" />
+                    <img :src="apiUrl +''+ re.art_image.url" alt class="cover" />
                   </div>
                   <div class="media-body">
                     <h6 class="mt-0 mb-1">
                       <b-link
-                        :href="`/detail/${article.id}`"
+                        :href="`/detail/${re.id}`"
                         class="color-link"
-                      >{{ $i18n.locale=='en' ? article.art_title_en : article.art_title_kh }}</b-link>
+                      >{{ $i18n.locale=='en' ? re.art_title_en : re.art_title_kh }}</b-link>
                     </h6>
                     <p
                       class="media-detail"
-                    >{{ $i18n.locale=='en' ? article.art_desc_en : article.art_desc_kh }}</p>
+                    >{{ $i18n.locale=='en' ? re.art_desc_en : re.art_desc_kh }}</p>
                     <div class="media-footer">
-                      <b-link :href="`/detail/${article.id}`" class="color-link">
+                      <b-link :href="`/detail/${re.id}`" class="color-link">
                         {{ $t('read_more') }}
                         <i class="fal fa-arrow-right"></i>
                       </b-link>
@@ -105,17 +105,18 @@
             <h3 class="media-title mb-4">{{ $t('la_news') }}</h3>
 
             <!-- media list -->
-            <ul class="list-unstyled" v-for="article in articles" v-bind:key="article.id">
+            <ul class="list-unstyled" v-for="lt in latest" v-bind:key="lt.id">
+              <h1>{{lt.publish_at}}</h1>
               <li class="media">
                 <div class="media-cover embed-responsive-4by3">
-                  <img :src="apiUrl +''+ article.art_image.url" alt class="cover" />
+                  <img :src="apiUrl +''+ lt.art_image.url" alt class="cover" />
                 </div>
                 <div class="media-body">
                   <h6 class="mt-0 mb-1">
                     <b-link
-                      :href="`/detail/${article.id}`"
+                      :href="`/detail/${lt.id}`"
                       class="color-link"
-                    >{{ $i18n.locale=='en' ? article.art_title_en : article.art_title_kh }}</b-link>
+                    >{{ $i18n.locale=='en' ? lt.art_title_en : lt.art_title_kh }}</b-link>
                   </h6>
                 </div>
               </li>
@@ -137,6 +138,7 @@ export default {
   },
   data() {
     return {
+      related: [],
       latest: [],
       article: [],
       articles: [],
@@ -156,15 +158,25 @@ export default {
     async fetchLatestNew() {
       const payload = await this.$axios.$get("/articles");
       this.latest = payload
-        .sort((a, b) => b.publish_at - a.publish_at)
-        .filter((item, index) => index <= 5);
+        .sort((a, b) => new Date(b.publish_at) - new Date(a.publish_at))
+        .filter((item, index) => item.id != this.id)
+        .slice(0, 5);
+    },
+
+    async fetchRelatedNew() {
+      const payload = await this.$axios.$get("/articles");
+      this.related = payload
+        // .sort((a, b) => b.publish_at - a.publish_at)
+        .filter((item, index) => item.id != this.id)
+        .slice(0, 5);
     },
   },
   computed: {},
   mounted() {
-    this.fetchLatestNew();
     this.fetchArticle();
     this.fetchArticles();
+    this.fetchRelatedNew();
+    this.fetchLatestNew();
   },
 };
 </script>
