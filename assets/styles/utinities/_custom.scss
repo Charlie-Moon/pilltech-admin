@@ -55,7 +55,9 @@ body {
             margin-bottom: 0px;
             line-height: 1.5;
             color: #465862;
-            width: 35%;
+            @media (min-width: 992px) {
+                width: 35%;
+            }
 
             span {
                 font-weight: $font-bold;

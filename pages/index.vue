@@ -21,7 +21,7 @@
     <div class="pharmacy-trial">
       <div class="container">
         <div class="text-pharmacy mt-5 mt-lg-0 pb-3 pb-md-3 pb-lg-0">
-          <div v-html="home_page.banner_title"></div>
+          <div v-html="$i18n.locale=='en' ? home_page.banner&&home_page.banner.banner_title_en : home_page.banner&&home_page.banner.banner_title_kh "></div>
         </div>
         <div class="trial-watch pb-5 pb-md-5 pb-lg-0">
           <div class="trial">
@@ -61,8 +61,8 @@
             <a href="javascript:void(0)">
               <div class="card shadow">
                 <div class="card-header">
-                  <div class="card-icon">
-                    <i class="fal fa-scanner-keyboard"></i>
+                  <div class="card-icon" v-html="$i18n.locale=='en' ? q_features.feat_icon :q_features.feat_icon">
+                    
                   </div>
                 </div>
                 <div class="card-body">
@@ -235,7 +235,7 @@
                   <div class="card-body">
                     <div class="card-title-b">
                       <h5>{{$i18n.locale=='en' ? home_page.plan&&home_page.plan.price_25.int_title_en : home_page.plan&&home_page.plan.price_25.int_title_kh}}</h5>
-                      <h4>{{home_page.plan&&home_page.plan.pri_num}}</h4>
+                      <h4>{{home_page.plan&&home_page.plan.price_25.pri_num}}</h4>
                       <h6>{{$i18n.locale=='en' ? home_page.plan&&home_page.plan.price_25.pri_month_en : home_page.plan&&home_page.plan.pric_month_kh}}</h6>
                     </div>
                     <div
