@@ -41,6 +41,15 @@
         <b-alert :show="dismissCountDown" dismissible fade variant="success">Submit success</b-alert>
         <b-form>
           <b-row>
+            <b-col cols="4"></b-col>
+            <b-col cols="4">
+              <b-alert :show="errors.email" dismissible fade variant="danger">{{msgError.email}}</b-alert>
+            </b-col>
+            <b-col cols="4">
+              <b-alert :show="errors.phone" dismissible fade variant="danger">{{msgError.phone}}</b-alert>
+            </b-col>
+          </b-row>
+          <b-row>
             <b-col cols="4">
               <b-input
                 id="inline-form-input-name"
@@ -57,15 +66,16 @@
                 type="email"
                 placeholder="Email"
                 v-model="contact.email"
+                @input="validateEmail"
               ></b-input>
             </b-col>
-
             <b-col cols="4">
               <b-input
                 id="inline-form-input-username"
                 class="mb-4"
                 placeholder="Phone Number"
                 v-model="contact.phone"
+                @input="validatePhone"
               ></b-input>
             </b-col>
           </b-row>
@@ -78,7 +88,6 @@
             rows="3"
             max-rows="6"
           ></b-form-textarea>
-          <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
           <center class="mt-5 w-100">
             <b-button
               variant="submit"
@@ -138,10 +147,42 @@ export default {
       showDismissibleAlert: false,
       home_page: [],
       map: [],
+      errors: {
+        phone: false,
+        email: false,
+      },
+      msgError: {
+        phone: "Please input valid phone number",
+        email: "Please input valid email address",
+      },
     };
   },
 
   methods: {
+    validateEmail() {
+      let email = this.contact.email;
+      if (
+        !email.match(
+          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+      ) {
+        this.errors.email = true;
+      } else {
+        this.errors.email = false;
+      }
+    },
+    validatePhone() {
+      let phone = this.contact.phone;
+      if (
+        !phone.match(
+          /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+        )
+      ) {
+        this.errors.phone = true;
+      } else {
+        this.errors.phone = false;
+      }
+    },
     async getMap() {
       const response = await this.$axios.$get("/map");
       this.map = response;

@@ -341,13 +341,14 @@
                   placeholder="Name"
                 />
               </div>
+              <b-alert :show="errors" dismissible fade variant="danger">{{errorPhone}}</b-alert>
               <div class="form-group">
                 <input
                   type="text"
                   v-model="feedback.phone"
                   class="form-control"
-                  id="number"
                   placeholder="Telephone"
+                  @input="validatePhone"
                 />
               </div>
               <div class="form-group">
@@ -533,9 +534,24 @@ export default {
       dismissSecs: 5,
       dismissCountDown: 0,
       showDismissibleAlert: false,
+      errors: false,
+      errorPhone: "Please input valid phone number",
     };
   },
   methods: {
+    validatePhone() {
+      let phone = this.feedback.phone;
+      console.log(phone);
+      if (
+        !phone.match(
+          /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+        )
+      ) {
+        this.errors = true;
+      } else {
+        this.errors = false;
+      }
+    },
     async homePage() {
       const response = await this.$axios.$get("/home-page");
       this.home_page = response;
