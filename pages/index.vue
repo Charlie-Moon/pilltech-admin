@@ -345,10 +345,11 @@
               <div class="form-group">
                 <input
                   type="text"
-                  v-model="feedback.phone"
                   class="form-control"
                   placeholder="Telephone"
                   @input="validatePhone"
+                  @keypress="validateQty"
+                  v-model="feedback.phone"
                 />
               </div>
               <div class="form-group">
@@ -365,7 +366,7 @@
             <div class="text-center pt-3 mb-3">
               <button
                 @click="submitFeedback"
-                :disabled="!(feedback.name&&feedback.phone&&feedback.message)"
+                :disabled="!(!errors&&feedback.name&&feedback.phone&&feedback.message)"
                 class="btn btn-sub"
               >{{ $t('btn_send') }}</button>
             </div>
@@ -539,6 +540,13 @@ export default {
     };
   },
   methods: {
+    validateQty($event) {
+      let charCode = $event.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        $event.preventDefault();
+        return;
+      }
+    },
     validatePhone() {
       let phone = this.feedback.phone;
       console.log(phone);
