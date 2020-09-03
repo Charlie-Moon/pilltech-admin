@@ -75,6 +75,7 @@
                 class="mb-4"
                 placeholder="Phone Number"
                 v-model="contact.phone"
+                @keypress="validateQty"
                 @input="validatePhone"
               ></b-input>
             </b-col>
@@ -159,6 +160,13 @@ export default {
   },
 
   methods: {
+    validateQty($event) {
+      let charCode = $event.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        $event.preventDefault();
+        return;
+      }
+    },
     validateEmail() {
       let email = this.contact.email;
       if (
