@@ -2,7 +2,7 @@
   <div>
     <Header />
     <!-- background section -->
-    <div class="background-img-header">
+    <div class="background-img-header ban">
       <div class="row no-gutters">
         <div class="col-5"></div>
         <div class="col-7">
