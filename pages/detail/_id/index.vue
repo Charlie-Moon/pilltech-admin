@@ -132,6 +132,12 @@
 
 <script>
 export default {
+  head: {
+    title: $i18n.locale=='en' ? article.art_title_en : article.art_title_kh,
+    meta: [
+      { hid: 'description', name: 'description', content:  $i18n.locale=='en' ? article.art_title_en : article.art_title_kh }
+    ]
+  },
   async fetch() {
     await this.fetchArticle();
   },

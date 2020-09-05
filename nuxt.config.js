@@ -3,7 +3,7 @@ export default {
   mode: 'universal',
   env: {
     BASE_URL: 'https://pilltech.com.kh',
-    apiUrl: 'https://pilltech-admin.kravanh.co',
+    apiUrl: 'http://localhost:1337',
   },
   server: {
     port: process.env.PORT || 3000,
