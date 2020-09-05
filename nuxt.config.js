@@ -2,7 +2,8 @@
 export default {
   mode: 'universal',
   env: {
-    apiUrl: 'http://localhost:1337',
+    BASE_URL: 'https://pilltech.com.kh',
+    apiUrl: 'https://pilltech-admin.kravanh.co',
   },
   server: {
     port: process.env.PORT || 3000,
@@ -15,7 +16,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_name || 'PillTech Co., Ltd',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

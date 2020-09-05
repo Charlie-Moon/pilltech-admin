@@ -1,7 +1,7 @@
 {
-  "name": "PillTechWeb",
+  "name": "PillTech",
   "version": "1.0.0",
-  "description": "My superb Nuxt.js project",
+  "description": "Pharmacy Platform built by Pharmacists for Pharmacists",
   "author": "Charlie",
   "private": true,
   "scripts": {

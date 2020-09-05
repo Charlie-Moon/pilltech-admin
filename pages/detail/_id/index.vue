@@ -26,14 +26,14 @@
 
                 <div class="d-flex mt-4">
                   <time datetime="2015-05-16 19:00">
-                    <i class="fal fa-calendar-alt mr-2"></i> 25-06-2020
+                    <i class="fal fa-calendar-alt mr-2"></i> {{article.publish_at}}
                   </time>
                   <div class="sharing ml-auto">
                     <ul class="list-inline mb-0">
                       <li class="list-inline-item mr-3">Share</li>
                       <li class="list-inline-item social">
                         <a
-                          :href="'http://www.facebook.com/sharer.php?s=' + apiUrl + `/detail/${article.id}`"
+                          :href="'http://www.facebook.com/sharer.php?s=' + appURL + `/detail/${article.id}`"
                           data-toggle="tooltip"
                           data-placement="top"
                           title="share to Facebook"
@@ -43,7 +43,7 @@
                       </li>
                       <li class="list-inline-item social">
                         <a
-                          :href="'https://twitter.com/intent/tweet?' + apiUrl + `/detail/${article.id}`"
+                          :href="'https://twitter.com/intent/tweet?' + appURLs + `/detail/${article.id}`"
                           data-toggle="tooltip"
                           data-placement="top"
                           title="share to Twitter"
@@ -137,6 +137,7 @@ export default {
   },
   data() {
     return {
+      appURL: process.env.BASE_URL,
       related: [],
       latest: [],
       article: [],

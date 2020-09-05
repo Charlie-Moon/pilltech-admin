@@ -31,7 +31,7 @@
             </b-card>
           </b-col>
         </b-row>
-        <b-pagination
+        <b-pagination class="justify-content-center"
           v-model="currentPage"
           :per-page="perPage"
           @change="fetchArticle"
