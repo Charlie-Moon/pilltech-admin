@@ -3,7 +3,7 @@
   <header class="pill-header" :class="{'fixed-tran' :fixedTran,'fixed-top':!fixedTran}">
     <b-container>
       <b-navbar class="px-0" toggleable="lg" type="light">
-        <b-navbar-brand class="mr-auto col-6 col-md-3 pl-lg-0" href="/">
+        <b-navbar-brand class="mr-auto col-6 col-md-3 pl-lg-0" :href="localePath('/')">
           <img src="/images/logox1.png" class="w-100" />
         </b-navbar-brand>
 
@@ -11,19 +11,19 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
             <div class="nav-item">
-              <nuxt-link to="/about" class="nav-link">About Us</nuxt-link>
+              <nuxt-link :to="localePath('/about')" class="nav-link">About Us</nuxt-link>
             </div>
             <div class="nav-item">
-              <nuxt-link to="/#howitwork" class="nav-link">How it works</nuxt-link>
+              <nuxt-link :to="localePath('/#howitwork')" class="nav-link">How it works</nuxt-link>
             </div>
             <div class="nav-item">
-              <nuxt-link to="/#pricing" class="nav-link">Pricing</nuxt-link>
+              <nuxt-link :to="localePath('/#pricing')" class="nav-link">Pricing</nuxt-link>
             </div>
             <div class="nav-item">
-              <nuxt-link to="/category" class="nav-link">News</nuxt-link>
+              <nuxt-link :to="localePath('/category')" class="nav-link">News</nuxt-link>
             </div>
             <div class="nav-item">
-              <nuxt-link to="/contact" class="nav-link">Contact</nuxt-link>
+              <nuxt-link :to="localePath('/contact')" class="nav-link">Contact</nuxt-link>
             </div>
           </b-navbar-nav>
 
